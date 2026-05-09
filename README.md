@@ -2,6 +2,8 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
+> **简介：** Windows 小工具：视频打标签、筛选、裁剪；安装包见 Releases。
+
 **English:** Small **Windows** desktop app for **tagging videos** (keep / skip), **browsing and filtering** a folder of clips with keyboard shortcuts, and **cropping** frames before export. Uses **Electron + React** and ships **FFmpeg** in the Windows build.
 
 **中文：** 这是一个放在电脑上的**小工具**，用来**尽快给视频打标签、过一遍做筛选，以及做画面裁剪**——适合手里一堆素材时要快速做决定，不必开很重的剪辑软件。软件名字还是 **Svideo**。
@@ -12,7 +14,7 @@
 | **作者** | [NKUDZL](https://github.com/NKUDZL) · Deng Zelai · [nkudzl@mail.nankai.edu.cn](mailto:nkudzl@mail.nankai.edu.cn) |
 | **License** | [MIT](LICENSE) |
 
-建议在仓库 **About** 里填一句简介，并加上 Topics：`video` `electron` `ffmpeg` `windows` `video-editing` `labeling` `crop` 等，方便别人搜到。
+可将上一行 **简介** 全文复制到 GitHub 仓库 **About → Description**。建议同时加上 Topics：`video` `electron` `ffmpeg` `windows` `video-editing` `labeling` `crop` 等。
 
 ---
 
