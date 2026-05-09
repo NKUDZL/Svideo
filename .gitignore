@@ -1,0 +1,12 @@
+# Archives / local bundles
+*.rar
+*.zip
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.idea/
+
+# Root-level accidental copies (source of truth is svideo-app/)
+# Uncomment if you no longer need this duplicate:
+# /App.jsx

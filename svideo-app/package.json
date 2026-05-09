@@ -1,0 +1,78 @@
+{
+  "name": "svideo-app",
+  "private": true,
+  "version": "1.0.0",
+  "main": "electron/main.js",
+  "description": "Desktop video screening & crop tool for creators (Electron, Windows). Keyboard-first batch review and FFmpeg export.",
+  "author": "Deng Zelai <nkudzl@mail.nankai.edu.cn>",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview",
+    "electron:dev": "concurrently -k -s first -n \"VITE,ELECTRON\" -c \"cyan,magenta\" \"cross-env NODE_ENV=development vite\" \"node scripts/wait-for-vite.js && cross-env NODE_ENV=development electron .\"",
+    "electron:dev:simple": "concurrently -k -s first -n \"VITE,ELECTRON\" -c \"cyan,magenta\" \"cross-env NODE_ENV=development vite\" \"node scripts/simple-delay.js && cross-env NODE_ENV=development electron .\"",
+    "electron:dev:manual": "cross-env NODE_ENV=development electron .",
+    "prebuild": "node scripts/download-ffmpeg.js",
+    "electron:build": "npm run prebuild && vite build && node scripts/clean-electron-build.js && electron-builder"
+  },
+  "dependencies": {
+    "lucide-react": "^0.263.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "@types/react": "^18.2.15",
+    "@types/react-dom": "^18.2.7",
+    "@vitejs/plugin-react": "^4.0.3",
+    "autoprefixer": "^10.4.14",
+    "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3",
+    "electron": "^25.3.0",
+    "electron-builder": "^24.6.3",
+    "eslint": "^8.45.0",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-react-refresh": "^0.4.3",
+    "ffbinaries": "^1.1.6",
+    "postcss": "^8.4.27",
+    "tailwindcss": "^3.3.3",
+    "vite": "^4.4.5",
+    "wait-on": "^7.0.1"
+  },
+  "build": {
+    "appId": "com.svideo.app",
+    "productName": "Svideo",
+    "directories": {
+      "output": "dist_electron"
+    },
+    "files": [
+      "dist/**/*",
+      "electron/**/*"
+    ],
+    "extraResources": [
+      {
+        "from": "node_modules/@ffmpeg-installer/win32-x64/ffmpeg.exe",
+        "to": "ffmpeg.exe",
+        "filter": ["**/*"]
+      }
+    ],
+    "win": {
+      "target": [
+        { "target": "nsis", "arch": ["x64"] },
+        { "target": "zip", "arch": ["x64"] }
+      ],
+      "icon": "public/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerLanguages": ["zh_CN", "en_US"]
+    },
+    "mac": {
+      "target": "dmg",
+      "icon": "public/icon.icns"
+    }
+  }
+}
