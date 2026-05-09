@@ -1,4 +1,4 @@
-# Svideo — Desktop Video Screener & Crop Tool (Electron, Windows)
+# Svideo — Batch Video Screen and Crop
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
