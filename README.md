@@ -4,7 +4,7 @@
 
 > **简介：** Windows 小工具：视频打标签、筛选、裁剪；安装包见 Releases。
 
-**English:** **Batch Video Label and Crop** is a small **Windows** desktop app for **tagging videos** (keep / skip), **browsing and filtering** a folder of clips with keyboard shortcuts, and **cropping** frames before export. Uses **Electron + React** and ships **FFmpeg** in the Windows build.
+**English:** **Batch video labeling**, **quick screening / select**, and **video crop** in one **Windows** desktop app — keyboard-friendly pass over a folder of clips (keep / skip), then **crop** and export with **FFmpeg**. **Electron + React**. (Display name in the installer remains **Svideo**.)
 
 **中文：** 这是一个放在电脑上的**小工具**，用来**尽快给视频打标签、过一遍做筛选，以及做画面裁剪**——适合手里一堆素材时要快速做决定，不必开很重的剪辑软件。
 
@@ -14,7 +14,15 @@
 | **作者** | [NKUDZL](https://github.com/NKUDZL) · Deng Zelai · [nkudzl@mail.nankai.edu.cn](mailto:nkudzl@mail.nankai.edu.cn) |
 | **License** | [MIT](LICENSE) |
 
-可将上一行 **简介** 全文复制到 GitHub 仓库 **About → Description**。建议同时加上 Topics：`video` `electron` `ffmpeg` `windows` `video-editing` `labeling` `crop` `batch` 等。
+**想在 GitHub 搜索里更容易被看到（必做）：**
+
+1. 打开仓库主页右侧 **About** 笔形编辑：**Description** 建议用英文首句（全站搜索更常匹配英文），例如粘贴：  
+   `Batch video label, screen/select, and crop — Windows desktop tool (Electron + FFmpeg). See Releases for downloads.`  
+2. 仍在 **About** 里添加 **Topics**（不设就几乎少一大截曝光），建议至少包含：  
+   `video` `video-crop` `video-editing` `labeling` `batch-processing` `electron` `ffmpeg` `windows` `desktop` `open-source` `footage` `screening`  
+3. **仓库名（URL）** 若仍是 `Svideo`，搜 `video crop` 时**相关度会偏低**；可在 **Settings → General → Repository name** 改成带关键词的短名，例如 **`batch-video-label-crop`** 或 **`video-label-crop-win`**（只能字母、数字、`-`）。改名后旧链接通常会跳转，Release 链接需用新路径更新 README 里 `github.com/NKUDZL/...` 部分。
+
+说明：**Best match** 前排多为高 Star 老仓库；新项目更现实的目标是占住 **video label / video crop / batch video** 等**长尾**排序，并靠 Topics + 描述 + 仓库名对齐关键词。
 
 ---
 
