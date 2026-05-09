@@ -2,88 +2,78 @@
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**English:** A keyboard-driven desktop app for **LabelMe-style binary labeling on videos** (yes / no → keep / discard), plus **interactive crop regions** and **FFmpeg-based export** — **Electron + React + Vite**. Built for quickly marking clips as good or bad across large folders.
+**English:** Small **Windows** desktop app for **tagging videos** (keep / skip), **browsing and filtering** a folder of clips with keyboard shortcuts, and **cropping** frames before export. Uses **Electron + React** and ships **FFmpeg** in the Windows build.
 
-**中文：** 同一套工具完成「像打标一样批量标好/坏（Y/N）、画裁剪框、导出批处理」——接近 LabelMe 那种**二分类标注**思路，但更偏过片效率。应用内产品名仍为 **Svideo**。
+**中文：** 这是一个放在电脑上的**小工具**，用来**尽快给视频打标签、过一遍做筛选，以及做画面裁剪**——适合手里一堆素材时要快速做决定，不必开很重的剪辑软件。软件名字还是 **Svideo**。
 
 |  |  |
 | --- | --- |
-| **Stack** | Electron 25 · React 18 · Vite 4 · Tailwind · FFmpeg (bundled in Windows builds) |
-| **Maintainer** | [NKUDZL](https://github.com/NKUDZL) · Deng Zelai · [nkudzl@mail.nankai.edu.cn](mailto:nkudzl@mail.nankai.edu.cn) |
+| **Stack** | Electron 25 · React 18 · Vite 4 · Tailwind · FFmpeg（Windows 打包） |
+| **作者** | [NKUDZL](https://github.com/NKUDZL) · Deng Zelai · [nkudzl@mail.nankai.edu.cn](mailto:nkudzl@mail.nankai.edu.cn) |
 | **License** | [MIT](LICENSE) |
 
-**Suggested GitHub topics (for discovery):** `video` `electron` `ffmpeg` `batch-processing` `video-editing` `labeling` `annotation` `crop` `desktop-app` `windows`
+建议在仓库 **About** 里填一句简介，并加上 Topics：`video` `electron` `ffmpeg` `windows` `video-editing` `labeling` `crop` 等，方便别人搜到。
 
 ---
 
-## Download (Windows, pre-built)
+## 下载（Windows）
 
-源码仓库**不附带**安装包。请在本页 **Releases** 下载已构建的安装程序或便携压缩包（上传由维护者发布）。
+安装包不在源码里，在 **Releases** 里下载即可。
 
-**→ [打开 Releases 下载页](https://github.com/NKUDZL/Svideo/releases)**
+**当前已发布：** [v1.0 — svideo v1.0 win](https://github.com/NKUDZL/Svideo/releases/tag/v1.0)
 
-若该页尚无任何版本，说明还没有发布构建产物，需要先按下面步骤**创建第一个 Release 并上传文件**；上传完成后，同一页面会出现可点击的 **Assets** 下载链接。
-
-### 如何发布可下载的安装包
-
-1. 在本机构建（见下文 **Build**），在 `svideo-app/dist_electron/` 中会得到（具体文件名以目录内为准）：
-   - **安装程序**：如 `Svideo Setup 1.0.0.exe`
-   - **便携版 ZIP**：如 `Svideo-1.0.0-win-x64.zip`（解压后运行 `Svideo.exe`）
-2. 打开 GitHub：**[Releases](https://github.com/NKUDZL/Svideo/releases)** → **Create a new release**。
-3. **Tag** 建议与版本一致，例如 `v1.0.0`；填写 Release 标题与说明 → 将上述 `.exe` / `.zip` **拖入 Assets** → **Publish release**。
-4. 发布成功后：
-   - 始终有效的入口仍是：**[Releases 列表](https://github.com/NKUDZL/Svideo/releases)**（推荐放在 README 里）。
-   - **`/releases/latest`** 仅在「至少已有一个正式 Release」时才会指向最新版；从未发布时会打不开或显示异常，属正常现象。
-   - 单个文件的**永久直链**可在已发布 Release 里，对某个 Asset 右键复制链接得到；格式为  
-     `https://github.com/NKUDZL/Svideo/releases/download/<Tag>/<文件名>`  
-     （`<Tag>`、`<文件名>` 必须与你上传时完全一致，含空格时需 URL 编码。）
-
-也可上传自打包的 **RAR** 等格式，步骤相同。
-
----
-
-## Screenshots
-
-| Home | Label (Y / N) |
+|  |  |
 | --- | --- |
-| ![Home](screenshots/首页.png) | ![Label pass](screenshots/视频筛选.png) |
+| **安装程序** | [Svideo.Setup.1.0.0.exe](https://github.com/NKUDZL/Svideo/releases/download/v1.0/Svideo.Setup.1.0.0.exe) |
+| **免安装压缩包** | 解压后运行 `Svideo.exe` → [Svideo-1.0.0-win.zip](https://github.com/NKUDZL/Svideo/releases/download/v1.0/Svideo-1.0.0-win.zip) |
+| **最新版入口** | [Releases / Latest](https://github.com/NKUDZL/Svideo/releases/latest) |
 
-| Crop | Export |
+若以后换了文件名或新版本，以上直链可能失效，请直接打开 [Releases](https://github.com/NKUDZL/Svideo/releases)，在对应版本下的 **Assets** 里点文件名下载（最稳妥）。
+
+---
+
+## 界面预览
+
+| 首页 | 筛选（Y / N） |
 | --- | --- |
-| ![Crop](screenshots/视频裁剪.png) | ![Export](screenshots/处理脚本与结果导出.png) |
+| ![首页](screenshots/首页.png) | ![筛选](screenshots/视频筛选.png) |
 
----
-
-## Features
-
-- Import multiple files or a whole folder; common video extensions supported.
-- **Label mode (Y / N):** mark keep / discard like a quick LabelMe-style pass, undo, save progress (`Ctrl+S`).
-- **Crop mode:** draw regions, presets & custom sizes; works with your selections for batch export.
-- Export filter lists, crop metadata, and FFmpeg-related batch helpers (see in-app options).
-- **Windows:** FFmpeg is packaged via `electron-builder` `extraResources`.
-
----
-
-## Keyboard shortcuts (labeling view)
-
-When labeling clips (not typing in an input):
-
-| Key | Action |
+| 裁剪 | 导出 |
 | --- | --- |
-| `Y` | Keep |
-| `N` | Discard |
-| `A` / `←` | Previous |
-| `D` / `→` | Next |
-| `Z` / `Backspace` | Undo |
-| `Space` | Play / Pause |
-| `Ctrl+S` | Save progress |
-| `Esc` | Close modal |
+| ![裁剪](screenshots/视频裁剪.png) | ![导出](screenshots/处理脚本与结果导出.png) |
 
 ---
 
-## Development
+## 能做什么
 
-Requires **Node.js** (LTS recommended) and **npm**.
+- 导入多个文件或整个文件夹，常见视频后缀都认得。
+- **打标签 / 筛选：** 逐条看，**Y** 保留、**N** 丢掉，可撤销，**Ctrl+S** 暂存进度。
+- **裁剪：** 在画面上框选区域，有比例和自定义尺寸，和上面的结果一起参与导出。
+- 可导出清单、裁剪信息和 FFmpeg 相关批处理（具体见软件里按钮）。
+- 仅 **Windows** 安装包内已带 FFmpeg；Mac 相关配置未完整，需自行改打包再发版。
+
+---
+
+## 快捷键（筛选界面）
+
+焦点不在输入框里时：
+
+| 按键 | 作用 |
+| --- | --- |
+| `Y` | 保留 |
+| `N` | 丢掉 |
+| `A` / `←` | 上一个 |
+| `D` / `→` | 下一个 |
+| `Z` / `Backspace` | 撤销 |
+| `Space` | 播放 / 暂停 |
+| `Ctrl+S` | 暂存 |
+| `Esc` | 关弹窗 |
+
+---
+
+## 开发（从源码跑）
+
+需要 **Node.js（建议 LTS）** 和 **npm**。
 
 ```bash
 cd svideo-app
@@ -91,7 +81,7 @@ npm install
 npm run electron:dev
 ```
 
-Web-only (no Electron / limited file & FFmpeg features):
+只调界面、不跑 Electron（部分读写和 FFmpeg 能力不可用）：
 
 ```bash
 cd svideo-app
@@ -101,41 +91,27 @@ npm run dev
 
 ---
 
-## Build
+## 打包（维护者）
 
 ```bash
 cd svideo-app
 npm run electron:build
 ```
 
-Artifacts are written to `svideo-app/dist_electron/` (ignored by Git). On Windows you should get both the **NSIS installer** and a **`.zip`** portable archive.
+产物在 `svideo-app/dist_electron/`（已 `.gitignore`，不会进仓库）。  
+**发新版时：** 在 [Releases](https://github.com/NKUDZL/Svideo/releases) 新建版本、上传 `.exe` 与 `.zip`，再把本 README 里「下载」表格中的 **Tag** 和 **文件名** 改成与 Assets 完全一致（有空格的文件名在 URL 里要编码）。
 
-> **macOS:** `package.json` includes a `mac` target, but FFmpeg `extraResources` is currently wired for Windows; mac builds need separate FFmpeg bundling if you ship them.
-
----
-
-## Repository layout
-
-- Application source: `svideo-app/`
-- Root `App.jsx` may diverge from `svideo-app/src/App.jsx` — treat **`svideo-app/src/App.jsx`** as the source of truth.
+> **macOS：** `package.json` 里有 `mac` 目标，但 FFmpeg 资源目前按 Windows 配的，要发 Mac 包需另改资源路径。
 
 ---
 
-## Push to GitHub
+## 仓库结构
 
-If this folder is not yet connected to a remote:
-
-```bash
-cd "d:\vidio diffusion\video_select"
-git remote add origin https://github.com/NKUDZL/Svideo.git
-git branch -M main
-git push -u origin main
-```
-
-Then publish **Releases** and add the download links above.
+- 程序源码在 **`svideo-app/`**。
+- 根目录的 `App.jsx` 若和 `svideo-app/src/App.jsx` 不一致，以 **`svideo-app/src/App.jsx`** 为准。
 
 ---
 
-## Keywords (for search)
+## 搜索用关键词（可选）
 
-video labeling, yes-no annotation, batch review, video crop, labelme-like, electron app, ffmpeg, windows desktop, creator workflow, keyboard shortcuts, 视频筛选, 视频标注, 视频裁剪
+video labeling, video screening, video crop, electron, ffmpeg, windows, keyboard, 视频标签, 视频筛选, 视频裁剪
