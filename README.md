@@ -1,8 +1,8 @@
-# Svideo — Batch Video Screen and Crop
+# Svideo — Batch Video Label and Crop
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-**English:** A keyboard-driven desktop app for **batch video screening** (keep / discard), **interactive crop regions**, and **FFmpeg-based export** — built with **Electron + React + Vite**. Optimized for creators who need a fast first pass on large folders of footage.
+**English:** A keyboard-driven desktop app for **LabelMe-style binary labeling on videos** (yes / no → keep / discard), plus **interactive crop regions** and **FFmpeg-based export** — **Electron + React + Vite**. Built for quickly marking clips as good or bad across large folders.
 
 **中文：** 同一套工具完成「批量过片、快捷键筛选、画裁剪框、导出批处理」——适合素材初选与尺寸整理。应用内产品名仍为 **Svideo**。
 
@@ -12,7 +12,7 @@
 | **Maintainer** | [NKUDZL](https://github.com/NKUDZL) · Deng Zelai · [nkudzl@mail.nankai.edu.cn](mailto:nkudzl@mail.nankai.edu.cn) |
 | **License** | [MIT](LICENSE) |
 
-**Suggested GitHub topics (for discovery):** `video` `electron` `ffmpeg` `batch-processing` `video-editing` `screening` `crop` `desktop-app` `windows`
+**Suggested GitHub topics (for discovery):** `video` `electron` `ffmpeg` `batch-processing` `video-editing` `labeling` `annotation` `crop` `desktop-app` `windows`
 
 ---
 
@@ -38,9 +38,9 @@ GitHub 仓库里**不包含**安装包本体（体积大、且会频繁更新）
 
 ## Screenshots
 
-| Home | Screening |
+| Home | Label (Y / N) |
 | --- | --- |
-| ![Home](screenshots/首页.png) | ![Screening](screenshots/视频筛选.png) |
+| ![Home](screenshots/首页.png) | ![Label pass](screenshots/视频筛选.png) |
 
 | Crop | Export |
 | --- | --- |
@@ -51,16 +51,16 @@ GitHub 仓库里**不包含**安装包本体（体积大、且会频繁更新）
 ## Features
 
 - Import multiple files or a whole folder; common video extensions supported.
-- **Filter mode:** mark keep/discard, undo, save progress (`Ctrl+S`).
+- **Label mode (Y / N):** mark keep / discard like a quick LabelMe-style pass, undo, save progress (`Ctrl+S`).
 - **Crop mode:** draw regions, presets & custom sizes; works with your selections for batch export.
 - Export filter lists, crop metadata, and FFmpeg-related batch helpers (see in-app options).
 - **Windows:** FFmpeg is packaged via `electron-builder` `extraResources`.
 
 ---
 
-## Keyboard shortcuts (filtering view)
+## Keyboard shortcuts (labeling view)
 
-When screening (not typing in an input):
+When labeling clips (not typing in an input):
 
 | Key | Action |
 | --- | --- |
@@ -132,4 +132,4 @@ Then publish **Releases** and add the download links above.
 
 ## Keywords (for search)
 
-video screening, batch review, video crop, electron app, ffmpeg, windows desktop, creator workflow, footage culling, keyboard shortcuts, 视频筛选, 视频裁剪
+video labeling, yes-no annotation, batch review, video crop, labelme-like, electron app, ffmpeg, windows desktop, creator workflow, keyboard shortcuts, 视频筛选, 视频标注, 视频裁剪
