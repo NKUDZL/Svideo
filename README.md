@@ -14,16 +14,6 @@
 | **作者** | [NKUDZL](https://github.com/NKUDZL) · Deng Zelai · [nkudzl@mail.nankai.edu.cn](mailto:nkudzl@mail.nankai.edu.cn) |
 | **License** | [MIT](LICENSE) |
 
-**想在 GitHub 搜索里更容易被看到（必做）：**
-
-1. 打开仓库主页右侧 **About** 笔形编辑：**Description** 建议用英文首句（全站搜索更常匹配英文），例如粘贴：  
-   `Batch video label, screen/select, and crop — Windows desktop tool (Electron + FFmpeg). See Releases for downloads.`  
-2. 仍在 **About** 里添加 **Topics**（不设就几乎少一大截曝光），建议至少包含：  
-   `video` `video-crop` `video-editing` `labeling` `batch-processing` `electron` `ffmpeg` `windows` `desktop` `open-source` `footage` `screening`  
-3. **仓库名（URL）** 若仍是 `Svideo`，搜 `video crop` 时**相关度会偏低**；可在 **Settings → General → Repository name** 改成带关键词的短名，例如 **`batch-video-label-crop`** 或 **`video-label-crop-win`**（只能字母、数字、`-`）。改名后旧链接通常会跳转，Release 链接需用新路径更新 README 里 `github.com/NKUDZL/...` 部分。
-
-说明：**Best match** 前排多为高 Star 老仓库；新项目更现实的目标是占住 **video label / video crop / batch video** 等**长尾**排序，并靠 Topics + 描述 + 仓库名对齐关键词。
-
 ---
 
 ## 下载（Windows）
