@@ -4,7 +4,7 @@
   "version": "1.0.0",
   "main": "electron/main.js",
   "description": "Desktop video screening & crop tool for creators (Electron, Windows). Keyboard-first batch review and FFmpeg export.",
-  "author": "Deng Zelai <nkudzl@mail.nankai.edu.cn>",
+  "author": "NKUDZL",
   "scripts": {
     "dev": "vite",
     "build": "vite build",

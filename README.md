@@ -11,7 +11,7 @@
 |  |  |
 | --- | --- |
 | **Stack** | Electron 25 · React 18 · Vite 4 · Tailwind · FFmpeg（Windows 打包） |
-| **作者** | [NKUDZL](https://github.com/NKUDZL) · Deng Zelai · [nkudzl@mail.nankai.edu.cn](mailto:nkudzl@mail.nankai.edu.cn) |
+| **作者** | [@NKUDZL](https://github.com/NKUDZL) |
 | **License** | [MIT](LICENSE) |
 
 ---
