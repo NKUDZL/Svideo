@@ -1,12 +1,12 @@
-# Svideo — Batch Video Label and Crop
+# Batch Video Label and Crop
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
 > **简介：** Windows 小工具：视频打标签、筛选、裁剪；安装包见 Releases。
 
-**English:** Small **Windows** desktop app for **tagging videos** (keep / skip), **browsing and filtering** a folder of clips with keyboard shortcuts, and **cropping** frames before export. Uses **Electron + React** and ships **FFmpeg** in the Windows build.
+**English:** **Batch Video Label and Crop** is a small **Windows** desktop app for **tagging videos** (keep / skip), **browsing and filtering** a folder of clips with keyboard shortcuts, and **cropping** frames before export. Uses **Electron + React** and ships **FFmpeg** in the Windows build.
 
-**中文：** 这是一个放在电脑上的**小工具**，用来**尽快给视频打标签、过一遍做筛选，以及做画面裁剪**——适合手里一堆素材时要快速做决定，不必开很重的剪辑软件。软件名字还是 **Svideo**。
+**中文：** 这是一个放在电脑上的**小工具**，用来**尽快给视频打标签、过一遍做筛选，以及做画面裁剪**——适合手里一堆素材时要快速做决定，不必开很重的剪辑软件。
 
 |  |  |
 | --- | --- |
@@ -14,7 +14,7 @@
 | **作者** | [NKUDZL](https://github.com/NKUDZL) · Deng Zelai · [nkudzl@mail.nankai.edu.cn](mailto:nkudzl@mail.nankai.edu.cn) |
 | **License** | [MIT](LICENSE) |
 
-可将上一行 **简介** 全文复制到 GitHub 仓库 **About → Description**。建议同时加上 Topics：`video` `electron` `ffmpeg` `windows` `video-editing` `labeling` `crop` 等。
+可将上一行 **简介** 全文复制到 GitHub 仓库 **About → Description**。建议同时加上 Topics：`video` `electron` `ffmpeg` `windows` `video-editing` `labeling` `crop` `batch` 等。
 
 ---
 
@@ -114,6 +114,12 @@ npm run electron:build
 
 ---
 
-## 搜索用关键词（可选）
+## License Agreement
 
-video labeling, video screening, video crop, electron, ffmpeg, windows, keyboard, 视频标签, 视频筛选, 视频裁剪
+本仓库源码与文档在 **[MIT License](LICENSE)** 下发布。你可以按许可条款自由使用、修改和再分发；使用时请遵守许可全文（含版权声明与免责声明），并确保用途合法合规。安装包内若包含第三方组件（如 Electron、FFmpeg 等），亦需遵守其各自许可。
+
+---
+
+## Contact Us
+
+使用问题、建议或合作意向，欢迎发邮件：[1412793081@qq.com](mailto:1412793081@qq.com)。
