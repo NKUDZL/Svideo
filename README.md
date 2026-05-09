@@ -4,7 +4,7 @@
 
 **English:** A keyboard-driven desktop app for **LabelMe-style binary labeling on videos** (yes / no → keep / discard), plus **interactive crop regions** and **FFmpeg-based export** — **Electron + React + Vite**. Built for quickly marking clips as good or bad across large folders.
 
-**中文：** 同一套工具完成「批量过片、快捷键筛选、画裁剪框、导出批处理」——适合素材初选与尺寸整理。应用内产品名仍为 **Svideo**。
+**中文：** 同一套工具完成「像打标一样批量标好/坏（Y/N）、画裁剪框、导出批处理」——接近 LabelMe 那种**二分类标注**思路，但更偏过片效率。应用内产品名仍为 **Svideo**。
 
 |  |  |
 | --- | --- |
