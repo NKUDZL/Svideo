@@ -20,7 +20,7 @@
 
 GitHub 仓库里**不包含**安装包本体（体积大、且会频繁更新）。推荐在 **Releases** 里提供可点击下载的安装包与免安装压缩包。
 
-1. 在 GitHub 创建仓库（例如 **`svideo`**）并推送本代码后，打开 **Releases** → **Draft a new release**。
+1. 在 GitHub 创建仓库（本仓库为 **[Svideo](https://github.com/NKUDZL/Svideo)**）并推送本代码后，打开 **Releases** → **Draft a new release**。
 2. 在本机执行构建（见下文「Build」），在 `svideo-app/dist_electron/` 中会生成例如：
    - **安装版**：`Svideo Setup 1.0.0.exe`（NSIS 安装程序）
    - **免安装 / 解压即用**：`Svideo-1.0.0-win-x64.zip`（名称以 `dist_electron` 下实际文件为准；解压后运行其中的 `Svideo.exe`）
@@ -28,9 +28,9 @@ GitHub 仓库里**不包含**安装包本体（体积大、且会频繁更新）
 
 | 类型 | 示例链接（发布时请替换为你的仓库与版本） |
 | --- | --- |
-| **最新版总览** | [https://github.com/NKUDZL/svideo/releases/latest](https://github.com/NKUDZL/svideo/releases/latest) |
-| **便携版 ZIP（示例）** | `https://github.com/NKUDZL/svideo/releases/download/v1.0.0/Svideo-1.0.0-win-x64.zip` |
-| **安装程序（示例）** | `https://github.com/NKUDZL/svideo/releases/download/v1.0.0/Svideo%20Setup%201.0.0.exe` |
+| **最新版总览** | [https://github.com/NKUDZL/Svideo/releases/latest](https://github.com/NKUDZL/Svideo/releases/latest) |
+| **便携版 ZIP（示例）** | `https://github.com/NKUDZL/Svideo/releases/download/v1.0.0/Svideo-1.0.0-win-x64.zip` |
+| **安装程序（示例）** | `https://github.com/NKUDZL/Svideo/releases/download/v1.0.0/Svideo%20Setup%201.0.0.exe` |
 
 > **提示：** 若你本地曾用 **RAR** 自己打过「绿色版」包，也可以同样上传到 Releases；直链格式与上表一致，只需把文件名改成实际上传的 `*.rar` / `*.zip`。
 
@@ -121,7 +121,7 @@ If this folder is not yet connected to a remote:
 
 ```bash
 cd "d:\vidio diffusion\video_select"
-git remote add origin https://github.com/NKUDZL/svideo.git
+git remote add origin https://github.com/NKUDZL/Svideo.git
 git branch -M main
 git push -u origin main
 ```
