@@ -18,21 +18,27 @@
 
 ## Download (Windows, pre-built)
 
-GitHub 仓库里**不包含**安装包本体（体积大、且会频繁更新）。推荐在 **Releases** 里提供可点击下载的安装包与免安装压缩包。
+源码仓库**不附带**安装包。请在本页 **Releases** 下载已构建的安装程序或便携压缩包（上传由维护者发布）。
 
-1. 在 GitHub 创建仓库（本仓库为 **[Svideo](https://github.com/NKUDZL/Svideo)**）并推送本代码后，打开 **Releases** → **Draft a new release**。
-2. 在本机执行构建（见下文「Build」），在 `svideo-app/dist_electron/` 中会生成例如：
-   - **安装版**：`Svideo Setup 1.0.0.exe`（NSIS 安装程序）
-   - **免安装 / 解压即用**：`Svideo-1.0.0-win-x64.zip`（名称以 `dist_electron` 下实际文件为准；解压后运行其中的 `Svideo.exe`）
-3. 把上述文件 **上传到该 Release 的 Assets**，然后在 README 里使用**固定版本**的直链（把 `v1.0.0` 与文件名换成你实际上传的名称）：
+**→ [打开 Releases 下载页](https://github.com/NKUDZL/Svideo/releases)**
 
-| 类型 | 示例链接（发布时请替换为你的仓库与版本） |
-| --- | --- |
-| **最新版总览** | [https://github.com/NKUDZL/Svideo/releases/latest](https://github.com/NKUDZL/Svideo/releases/latest) |
-| **便携版 ZIP（示例）** | `https://github.com/NKUDZL/Svideo/releases/download/v1.0.0/Svideo-1.0.0-win-x64.zip` |
-| **安装程序（示例）** | `https://github.com/NKUDZL/Svideo/releases/download/v1.0.0/Svideo%20Setup%201.0.0.exe` |
+若该页尚无任何版本，说明还没有发布构建产物，需要先按下面步骤**创建第一个 Release 并上传文件**；上传完成后，同一页面会出现可点击的 **Assets** 下载链接。
 
-> **提示：** 若你本地曾用 **RAR** 自己打过「绿色版」包，也可以同样上传到 Releases；直链格式与上表一致，只需把文件名改成实际上传的 `*.rar` / `*.zip`。
+### 如何发布可下载的安装包
+
+1. 在本机构建（见下文 **Build**），在 `svideo-app/dist_electron/` 中会得到（具体文件名以目录内为准）：
+   - **安装程序**：如 `Svideo Setup 1.0.0.exe`
+   - **便携版 ZIP**：如 `Svideo-1.0.0-win-x64.zip`（解压后运行 `Svideo.exe`）
+2. 打开 GitHub：**[Releases](https://github.com/NKUDZL/Svideo/releases)** → **Create a new release**。
+3. **Tag** 建议与版本一致，例如 `v1.0.0`；填写 Release 标题与说明 → 将上述 `.exe` / `.zip` **拖入 Assets** → **Publish release**。
+4. 发布成功后：
+   - 始终有效的入口仍是：**[Releases 列表](https://github.com/NKUDZL/Svideo/releases)**（推荐放在 README 里）。
+   - **`/releases/latest`** 仅在「至少已有一个正式 Release」时才会指向最新版；从未发布时会打不开或显示异常，属正常现象。
+   - 单个文件的**永久直链**可在已发布 Release 里，对某个 Asset 右键复制链接得到；格式为  
+     `https://github.com/NKUDZL/Svideo/releases/download/<Tag>/<文件名>`  
+     （`<Tag>`、`<文件名>` 必须与你上传时完全一致，含空格时需 URL 编码。）
+
+也可上传自打包的 **RAR** 等格式，步骤相同。
 
 ---
 
